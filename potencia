@@ -1,0 +1,28 @@
+long exp(int base,int pot);
+long exp2(int base,int pot);
+
+int main(){
+    int base, pot;
+    long n;
+    int res;
+    printf("ingresa un valor\n");
+    scanf("%d, &base);
+    printf("ingresa una potencia\n");
+    scanf("%d", &pot);
+    printf("%ld\n", exp(base,pot));
+    printf("%ld\n", exp2(base,pot));
+    return 0;
+}
+long exp(int base, int pot){
+     int i;
+     long res = 1;
+     for(i=0;i < pot;i++)
+     res*=base;
+     return res;
+}
+long exp2(int base,int pot){
+     if(pot==0) return 1;
+     else{
+          return exp2(base,pot-1)*base;
+     }
+}
