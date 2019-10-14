@@ -1,0 +1,31 @@
+FACTORIAL CURSIVO
+#include <stdio.h>
+int main(){
+        int n,f,i;
+        f=1;
+        printf("Ingrese un numero: ");
+        scanf("%d", &n);
+        for(i=1;i<=n;i++){
+        f= f*i;}
+        printf("El factorial de %d es %d", n,f);
+        printf("\n");
+        return 0;
+}
+
+
+FACTORIAL ITERATIVO
+#include <stdio.h>
+int main(){
+        int n,f,i,fac;
+        f=1;
+        printf("Ingrese un numero: ");
+        scanf("%d", &n);
+        for(i=1;i<=n-2;i++){
+        f = f*i;}
+        fac = n*(n-1)*f;
+        printf("El factorial de %d es %d", n,fac);
+        printf("\n");
+        return 0;
+}
+
+        
